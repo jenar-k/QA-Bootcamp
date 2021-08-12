@@ -23,7 +23,7 @@ function luasPersegiPanjang(panjang,lebar){
     var luas = panjang * lebar
     document.write('luas persegi panjang = ' + luas);
 }
-
+//test
 
 // menggunaka nilai balik
 // segitiga (0.5 * alas * tinggi)
