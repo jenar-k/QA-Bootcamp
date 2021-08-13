@@ -48,16 +48,22 @@ nilaiPeserta(inputanNilai);
 
 var inputanNilai = parseInt(prompt("Masukkan Nilai Anda : ", '0-100'));
 function nilaiPeserta(nilai) {
-  if ((nilai >=80) && (nilai <100)) {
+  if (nilai > 100){
+    document.write ("Range nilai hanya boleh di angak 0-100");
+  } else if (nilai <0){
+    document.write ("Range nilai hanya boleh di angak 0-100");
+  } else if ((nilai >=80) && (nilai <100)) {
     document.write("Nilai Anda Grade : A");
-  } else if ((nilai >=60) && (nilai <79)) {
+  } else if ((nilai >=60) && (nilai <=79)) {
     document.write("Nilai Anda Grade : B")
-  } else if ((nilai >=40) && (nilai <59)){
+  } else if ((nilai >=40) && (nilai <=59)){
     document.write("Nilai Anda Grade : C");
-  } else if ((nilai >=20) && (nilai <39)) {
+  } else if ((nilai >=20) && (nilai <=39)) {
     document.write("Nilai Anda Grade : D");
   } else if ((nilai <20)){
     document.write("Nilai Anda Grade : E");
+  } else {
+    document.write ("Inputan Anda tidak valid");
   }
 }
 nilaiPeserta(inputanNilai);
