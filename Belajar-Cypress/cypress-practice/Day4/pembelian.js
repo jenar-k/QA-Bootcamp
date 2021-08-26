@@ -1,13 +1,24 @@
-describe ('Beli', function() {
-    it ('TC-01 Beli', function (){
-        cy.visit('https://www.demoblaze.com/index.html');
-        cy.get('#login2').click();
+describe('Beli', function () {
+    it('TC-01 Beli', function () {
+        cy.visit('https://www.demoblaze.com/index.html')
+        cy.get(':nth-child(2) > .card > .card-block > .card-title > .hrefch').click();
         cy.wait(3000);
-        cy.get('#logInModalLabel').should('have.text', 'Log in');
-        cy.get('#loginusername').type('arjen9756').should('have.value', 'arjen9756');
+        cy.get('.col-sm-12 > .btn').click();
         cy.wait(3000);
-        cy.get('#loginpassword').type('12345678').should('have.value', '12345678');
+        cy.get('#cartur').click();
         cy.wait(3000);
-        cy.get('#logInModal > .modal-dialog > .modal-content > .modal-footer > .btn-primary').click();
+        cy.get('.col-lg-1 > .btn').click();
+        cy.wait(3000);
+        cy.get('#name').type('arjen9756');
+        cy.wait(3000);
+        cy.get('#city').type('Yogyakarta');
+        cy.wait(3000);
+        cy.get('#card').type('121323612813613');
+        cy.wait(3000);
+        cy.get('#month').type('August');
+        cy.wait(3000);
+        cy.get('#year').type('2022');
+        cy.wait(3000);
+        cy.get('#orderModal > .modal-dialog > .modal-content > .modal-footer > .btn-primary').click();
     })
 })
