@@ -9,5 +9,6 @@ describe ('Login', function() {
         cy.get('#loginpassword').type('12345678').should('have.value', '12345678');
         cy.wait(3000);
         cy.get('#logInModal > .modal-dialog > .modal-content > .modal-footer > .btn-primary').click();
+        cy.get('#nameofuser').should('be.visible');
     })
 })

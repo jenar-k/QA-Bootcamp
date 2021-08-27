@@ -11,12 +11,4 @@ describe ('Registrasi', function() {
         cy.get('#signInModal > .modal-dialog > .modal-content > .modal-footer > .btn-primary').click();
         cy.get('.active > .nav-link').should('have.text', 'Home');
     })
-
-        // // cy.get('#signin2').type('arjen').should('have.value', 'arjen9756');
-        // cy.get('#signin2').type('arjen9756');
-        // cy.wait(10000);
-        // cy.get('#sign-password').type('12345678');
-        // cy.wait(10000);
-        // cy.get('#signInModal > .modal-dialog > .modal-content > .modal-footer > .btn-primary').click();
-        // cy.get('.active > .nav-link').should('have.text', 'home');
 })
