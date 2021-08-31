@@ -7,7 +7,6 @@ describe('Admin PKH', function () {
         cy.get('#userEmail').type('jenar@email.com').should('have.value', 'jenar@email.com');
         cy.get('#genterWrapper > .col-md-9 > :nth-child(1) > .custom-control-label').click()
         cy.get('#userNumber').type('080989999').should('have.value', '080989999');
-        cy.get('#dateOfBirthInput').should('have.value', '31 Aug 2021');
         cy.get('#dateOfBirthInput' , {force : true}).click().type('{selectall}' , '{backspace}').type('13 Jan 2000').type('{enter}');
         cy.get('#dateOfBirthInput').should('have.value', '13 Jan 2000');
         cy.get('.subjects-auto-complete__value-container',{force:true}).type('daftar').should('have.value', '');
